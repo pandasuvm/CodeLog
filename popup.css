@@ -1,0 +1,49 @@
+body {
+  width: 220px; /* Slightly wider for better button spacing */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font */
+  background-color: #f4f4f4; /* Light background for contrast */
+  margin: 0;
+  padding: 20px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 8px; /* More rounded corners */
+  cursor: pointer;
+  font-size: 16px; /* Larger font size for readability */
+  transition: background-color 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+button:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow on hover for depth effect */
+}
+
+#markAsDone {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+
+#markAsDone:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+#saveForLater {
+  background-color: #FFC107; /* Yellow */
+  color: black;
+}
+
+#saveForLater:hover {
+  background-color: #ffb300; /* Darker yellow on hover */
+}
+
+#viewSaved {
+  background-color: #2196F3; /* Blue */
+  color: white;
+}
+
+#viewSaved:hover {
+  background-color: #1976d2; /* Darker blue on hover */
+}

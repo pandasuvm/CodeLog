@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 80%;
+      margin: auto;
+      font-family: 'Fira Code', monospace; /* Coding-like vibe font */
+      background-color: #1e1e1e; /* Dark background for minimal coding feel */
+      color: #c5c6c7; /* Light text color */
+      padding: 20px;
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      text-align: center;
+      color: #66fcf1; /* Neon blue color for a coding vibe */
+    }
+    
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+    
+    th, td {
+      border: 1px solid #333; /* Subtle borders for minimalistic look */
+      padding: 12px;
+      text-align: left;
+      color: #c5c6c7;
+    }
+    
+    th {
+      background-color: #0b0c10; /* Dark header background */
+      cursor: pointer; /* Indicating sorting feature */
+    }
+    
+    td {
+      background-color: #1f2833;
+    }
+    
+    td a {
+      color: #66fcf1; /* Link color for better readability */
+      text-decoration: none;
+    }
+    
+    td a:hover {
+      text-decoration: underline;
+    }
+
+    /* Search box styling */
+    #searchBar {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #333;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      border-radius: 5px;
+      font-family: 'Fira Code', monospace;
+    }
+
+    #searchBar::placeholder {
+      color: #888;
+    }
+    #exportCsvBtn{
+      margin-top: 5px;
+      padding:10px;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      font-family: 'Fira Code',monospace;
+      transition: padding 0.5s;
+    }
+
+    #exportCsvBtn:hover{
+      padding:15px;
+      background-color: #24262d;
+      color:#66fcf1;
+      font-family: 'Fira Code',monospace;
+    }
+  </style>
+</head>
+<body>
+  <body>
+    <h1>CodeLog - Saved Questions</h1>
+    <!-- Export Button -->
+    <input type="text" id="searchBar" placeholder="Search questions...">
+    <table id="questionTable">
+      <thead>
+        <tr>
+          <th id="sortSNo">S. No</th>
+          <th>Question</th>
+          <th>Link</th>
+          <th>Status</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Question rows will be injected here by JavaScript -->
+      </tbody>
+    </table>
+    <button id="exportCsvBtn">Export as CSV</button>
+    <script src="saved.js"></script>
+  </body>
+  
+
+</html>

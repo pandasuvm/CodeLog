@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      width: 220px; 
+      margin: 0;
+      padding: 20px;
+      font-family: 'Fira Code', monospace; /* Coding-like font */
+      background-color: #1e1e1e; /* Dark background for minimal coding feel */
+      color: #c5c6c7; /* Light text for contrast */
+      text-align: center; /* Center-align the text */
+      box-sizing: border-box;
+    }
+    
+    h1 {
+      font-size: 24px;
+      color: #66fcf1; /* Neon blue for title */
+      margin-bottom: 20px;
+    }
+    
+    button {
+      width: 100%;
+      padding: 12px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 8px; /* Rounded corners */
+      font-size: 16px; 
+      cursor: pointer;
+      transition: background-color 0.3s, box-shadow 0.3s;
+    }
+
+    button:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    #saveForLater {
+      background-color: #ffc107; /* Yellow */
+      color: black;
+    }
+
+    #saveForLater:hover {
+      background-color: #ffb300; /* Darker yellow */
+    }
+
+    #markAsDone {
+      background-color: #4caf50; /* Green */
+      color: white;
+    }
+
+    #markAsDone:hover {
+      background-color: #45a049; /* Darker green */
+    }
+
+    #viewSaved {
+      background-color: #2196f3; /* Blue */
+      color: white;
+    }
+
+    #viewSaved:hover {
+      background-color: #1976d2; /* Darker blue */
+    }
+
+    #notePrompt {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #0b0c10; /* Dark background */
+      border: 1px solid #333;
+      border-radius: 8px;
+      color: #c5c6c7;
+      text-align: center;
+    }
+
+    #noteEntry {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      background-color: #0b0c10;
+      border: 1px solid #333;
+      border-radius: 8px;
+    }
+
+    #noteInput {
+      width: 100%;
+      padding: 8px;
+      margin-top: 10px;
+      background-color: #1f2833; /* Darker background */
+      border: 1px solid #ccc;
+      color: #c5c6c7;
+      border-radius: 4px;
+    }
+
+    .note-buttons button {
+      width: 48%;
+      margin: 1%;
+      background-color: #0b0c10;
+      color: #c5c6c7;
+      border: 1px solid #333;
+      border-radius: 4px;
+      transition: background-color 0.3s;
+    }
+
+    .note-buttons button:hover {
+      background-color: #1f2833; /* Slightly darker on hover */
+    }
+  </style>
+</head>
+<body>
+  <h1>CodeLog</h1>
+  <button id="saveForLater">Save for Later</button>
+  <button id="markAsDone">Mark as Done</button>
+  <button id="viewSaved">View Saved</button>
+
+  <div id="notePrompt">
+    <p>Add a note?</p>
+    <div class="note-buttons">
+      <button id="noteYes">Yes</button>
+      <button id="noteNo">No</button>
+    </div>
+  </div>
+
+  <div id="noteEntry">
+    <textarea id="noteInput" placeholder="Enter your note here..."></textarea>
+    <button id="confirmNote">Confirm</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
